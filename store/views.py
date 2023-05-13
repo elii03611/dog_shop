@@ -5,20 +5,19 @@ from store.serializer import ProductSerializer
 from .serializer import Product
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework import generics
+from django.http import JsonResponse, HttpResponse
 
 # @permission_classes([IsAuthenticated])
 # @api_view(['GET', 'POST'])
 
-
+def index(req):
+    return JsonResponse('hello', safe=False)
 
 class ListProductView(generics.ListAPIView):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
     lookup_field = 'id'
 
-def home(request):
-    home = Product.objects.all()
-    return home
 
 class ProductView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Product.objects.all()
