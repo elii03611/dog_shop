@@ -1,0 +1,9 @@
+.Header h1 {
+	color: blue;
+}
+
+.AuthMenu {
+	position: absolute;
+    right: 15px;
+    top: 20px;
+}

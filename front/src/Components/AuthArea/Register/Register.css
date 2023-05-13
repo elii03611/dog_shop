@@ -1,0 +1,18 @@
+.Register > form {
+    width: 450px;
+}
+
+.Register>h2 {
+    text-align: center;
+}
+
+.Register input ,
+.Register button {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.Register span {
+    color: red;
+}
