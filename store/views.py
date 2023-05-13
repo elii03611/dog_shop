@@ -16,6 +16,9 @@ class ListProductView(generics.ListAPIView):
     serializer_class = ProductSerializer
     lookup_field = 'id'
 
+def home(request):
+    home = Product.objects.all()
+    return home
 
 class ProductView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Product.objects.all()
